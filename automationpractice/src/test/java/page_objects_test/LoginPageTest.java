@@ -25,10 +25,19 @@ public class LoginPageTest extends BrowserDriver {
 
     @DataProvider
     public Object[][] readData() throws Exception {
-
+        String sheetName = null;
         MyDataReader myDataReader = new MyDataReader();
-        myDataReader.setExcelFile("/Users/jahidul/IdeaProjects/batch1903webautomationframework/automationpractice/testData/TestData.xlsx");
-       Object[][] data = myDataReader.getExcelSheetData("Sheet3");
+        String path = System.getProperty("user.dir") + "/testData/TestData.xlsx";
+        myDataReader.setExcelFile(path);
+        String environment = System.getProperty("env", "PROD");
+
+        if(environment.equals("QA")){
+            sheetName="Sheet3";}
+        else if(environment.equals("PROD")){
+            sheetName="Sheet1";
+        }
+
+        Object[][] data = myDataReader.getExcelSheetData(sheetName);
        return data;
     }
 

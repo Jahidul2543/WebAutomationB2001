@@ -1,6 +1,5 @@
 package reader;
 
-
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -10,17 +9,17 @@ import java.io.FileInputStream;
 
 public class MyDataReader {
 	
-	protected XSSFSheet ExcelWSheet;
-	protected XSSFWorkbook ExcelWBook;
-	protected XSSFCell Cell;
-	protected XSSFRow Row;
+	protected XSSFSheet excelWSheet;
+	protected XSSFWorkbook excelWBook;
+	protected XSSFCell cell;
+	protected XSSFRow row;
 
 	
 	public void setExcelFile(String Path) throws Exception {
 		 
 			try {
 			FileInputStream ExcelFile = new FileInputStream(Path);
-			ExcelWBook = new XSSFWorkbook(ExcelFile);
+			excelWBook = new XSSFWorkbook(ExcelFile);
 			///ExcelWSheet = ExcelWBook.getSheet(SheetName);
 			} catch (Exception e){
 				throw (e);
@@ -33,8 +32,8 @@ public class MyDataReader {
 		String[][] data = null;
 		String[][] mydata = null;
 
-		if (ExcelWBook != null) {
-			XSSFSheet sheet = ExcelWBook.getSheet(sheetname);
+		if (excelWBook != null) {
+			XSSFSheet sheet = excelWBook.getSheet(sheetname);
 			if (sheet != null) {
 				int rows = sheet.getLastRowNum();
 				int cols = sheet.getRow(sheet.getLastRowNum()).getPhysicalNumberOfCells();

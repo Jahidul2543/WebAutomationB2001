@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.709 s <<< FAILURE! - in TestSuite
+loginTest(page_objects_test.LoginPageTest)  Time elapsed: 0.667 s  <<< FAILURE!
+org.testng.internal.reflect.MethodMatcherException: 
+
+Data provider mismatch
+Method: loginTest([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}])
+Arguments: [(java.lang.String)jah@gmail.com,(java.lang.String)hello,(java.lang.String)There is 1 error,(java.lang.String)]
+
+generateReport(page_objects_test.LoginPageTest)  Time elapsed: 0.677 s  <<< FAILURE!
+java.lang.NullPointerException
+
