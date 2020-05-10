@@ -29,7 +29,7 @@ public class LoginPageTest extends BrowserDriver {
         MyDataReader myDataReader = new MyDataReader();
         String path = System.getProperty("user.dir") + "/testData/TestData.xlsx";
         myDataReader.setExcelFile(path);
-        String environment = System.getProperty("env", "PROD");
+        String environment = System.getProperty("env", "QA");
 
         if(environment.equals("QA")){
             sheetName="Sheet3";}

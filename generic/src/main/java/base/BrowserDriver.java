@@ -92,8 +92,8 @@ public class BrowserDriver {
      * Browserstack Credentials
      *
      * */
-    public static final String browserstack_username = System.getProperty("bsUName");
-    public static final String browserstack_automateKey = System.getProperty("bsSecretKey");
+    public static final String browserstack_username = System.getProperty("bsUName", "mislam1");
+    public static final String browserstack_automateKey = System.getProperty("bsSecretKey", "fLT1od64aNyhBBcxr7Ki");
 
     // public static final String browserstack_username = "mislam1"; //mislam1
     // public static final String browserstack_automateKey = ""; //
